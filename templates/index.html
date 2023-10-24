@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>LANDING PAGE |</title>
+</head>
+<body>
+  <section>
+                <div class="content">
+                    <div class="textbox">
+                        <h2>It's not just a Buffet<br> It's a <span>Grand Buffet Experience</span></h2>
+                        <p>
+                           Elevate your events with our culinary masterpieces. At Epicurean Elegance, we transform buffets into unforgettable experiences. 
+                           Explore a world of flavors, artfully presented. Create memories that savor every moment.
+                        </p>
+                        <a href="{{ url_for('home') }}">Reserve Your Table</a>
+                    </div>
+                            <div class="imgBox">
+                            <img src="{{ url_for('static', filename='img/index.webp') }}" />
+                            </div>
+                    </div>
+                </div>
+         </section>        
+  
+</body>
+</html>

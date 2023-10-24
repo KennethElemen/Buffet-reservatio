@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/update.css') }}">
+    <title>Update Reservation</title>
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/logo2.png') }}" class="logo" /></a>
+        <ul>
+            <li><a href="{{ url_for('home') }}">HOME</a></li>
+            <li><a href="{{ url_for('reserve') }}">RESERVE</a></li>
+            <li><a href="{{ url_for('admin') }}">ADMIN</a></li>
+        </ul>
+    </header>   
+   <div class="container">
+    <h2>Update Reservation</h2>
+    <form method="post" action="{{ url_for('update_reservation', id=id) }}">
+        <input type="hidden" name="id" value="{{ reservation[0] }}">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="input-field" value="{{ reservation[1] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="contact-number">Contact Number</label>
+            <input type="text" id="contact-number" name="contact-number" class="input-field" value="{{ reservation[2] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" class="input-field" value="{{ reservation[3] }}" required>
+        </div>
+        <div class="form-group">
+            <label for="meal-type">Meal Type</label>
+            <select id="meal-type" name="meal-type" class="input-field" required>
+                <option value="Breakfast" {% if reservation[4] == "Breakfast" %}selected{% endif %}>Breakfast</option>
+                <option value="Lunch" {% if reservation[4] == "Lunch" %}selected{% endif %}>Lunch</option>
+                <option value="Dinner" {% if reservation[4] == "Dinner" %}selected{% endif %}>Dinner</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="num-people">Number of People</label>
+            <input type="number" id="num-people" name="num-people" class="input-field" value="{{ reservation[5] }}" required>
+        </div>
+        <div class="modal--footer">
+            <button type="submit" class="reserve-btn upgrade-btn">Update Reservation</button>
+        </div>
+    </form>
+    <div class="logout-button">
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+</div>
+
+</body>
+</html>

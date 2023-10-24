@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/ css?family=Poppins: 200, 300, 400, 500, 600, 700, 800, 900&display=swap');
+
+* 
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+    padding: 100px;
+   background: linear-gradient(to right, #F5F5DC, #8DAE94);
+}
+section{
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+header{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+padding: 40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-family: 'ROMANUS', sans-serif;
+
+}
+
+header .logo{
+    position: relative;
+    max-width: 100px;
+}
+header ul {
+  position: left;
+  display: flex;
+  padding-right: 100px;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  display: inline-block;
+  color: #333;
+  font-weight: 400;
+  font-size: 20px;
+  margin-left: 30px;
+  text-decoration: none;
+}
+
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .textbox{
+    position: relative;
+    max-width: 600px;
+    font-family: 'ROMANUS', sans-serif;
+}
+
+.content .textbox h2{
+    color: #333;
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight:    500em;
+    font-family: 'ROMANUS', sans-serif;
+}
+
+.content .textbox h2 span{
+    color: #017143;
+    font-size: 1.2em;
+    font-weight: 900;
+    font-family: 'ROMANUS', sans-serif;
+
+}
+
+.content .textbox p {
+    color:#333;
+
+}
+
+.content .textbox a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background:#017143;
+    border-radius: 40px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-family: 'ROMANUS', sans-serif;
+}
+
+.content .imgBox{
+    width: 900px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 90px;
+    padding-left: 90px;
+    font-family: 'ROMANUS', sans-serif;
+}
+
+.main-area{
+
+  background: linear-gradient(to right, #F5F5DC, #8DAE94);
+  width: 100%;
+  height: 100vh;
+  font-family: 'ROMANUS', sans-serif;
+
+}
+
+
+/* Apply the modal styles to the form */
+.form {
+  width: 450px;
+  background-color: white;
+  box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form .banner {
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.form .title {
+  font-weight: 700;
+  font-size: 18px; /* Increased font size */
+  line-height: 22px; /* Increased line height */
+  text-align: center;
+  color: #2B2B2F;
+  margin-bottom: 15px;
+}
+
+.form .description {
+  max-width: 80%;
+  margin: auto;
+  font-weight: 600;
+  font-size: 12px; /* Increased font size */
+  line-height: 18px; /* Increased line height */
+  text-align: center;
+  color: #5F5D6B;
+}
+
+/* Apply the input field styles */
+.form .form-group {
+  margin-bottom: 15px;
+}
+
+.form .form-group label {
+  font-weight: 600;
+  font-size: 14px; /* Increased font size */
+  color: #2B2B2F;
+}
+
+.form .form-group .input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ebebec;
+  border-radius: 7px;
+  font-size: 13px; /* Increased font size */
+  color: #2B2B2F; /* Text color */
+}
+
+/* Apply the button styles */
+.form .modal--footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-top: 1px solid #ebebec;
+}
+
+.form .reserve-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background: #0bdd12;
+  box-shadow: 0px 0.5px 0.5px #EFEFEF, 0px 1px 0.5px rgba(239, 239, 239, 0.5);
+  border-radius: 7px;
+  border: 0;
+  outline: none;
+  color: #ffffff;
+  font-size: 14px; /* Increased font size */
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.form .reserve-btn:hover {
+  background-color: #07b90d;
+}

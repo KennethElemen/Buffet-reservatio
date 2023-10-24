@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: rgb(243, 236, 223);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'ROMANUS', sans-serif;
+  background: linear-gradient(to right, #F5F5DC, #8DAE94);
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header .logo {
+  position: relative;
+  max-width: 100px;
+}
+
+header ul {
+  position: left;
+  display: flex;
+  padding-right: 100px;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  display: inline-block;
+  color: #333;
+  font-weight: 400;
+  font-size: 20px;
+  margin-left: 30px;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  margin-top: 100px;
+}
+
+.centered-content {
+  display: flex;
+  margin: 20px;
+}
+
+.modal {
+  flex: 1;
+  max-width: 450px;
+  margin-right: 20px;
+}
+
+.reserved {
+  flex: 1;
+}
+
+.form {
+  width: 100%;
+  box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-right: 40px;
+  background-color: #F7F7F7;
+}
+
+.form .banner {
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.form .title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 25px;
+  text-align: center;
+  color: #2B2B2F;
+  margin-bottom: 20px;
+}
+
+.form .form-group {
+  margin-bottom: 15px;
+}
+
+.form .form-group label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #2B2B2F;
+}
+
+.form .form-group .input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ebebec;
+  border-radius: 7px;
+  font-size: 13px;
+  color: #2B2B2F;
+}
+
+.form .modal--footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-top: 1px solid #ebebec;
+}
+
+.form .reserve-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to right, #5a9e5d, #283f2d);
+  box-shadow: 0px 0.5px 0.5px #EFEFEF, 0px 1px 0.5px rgba(239, 239, 239, 0.5);
+  border-radius: 7px;
+  border: 0;
+  outline: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+}
+
+.form .reserve-btn:hover {
+  background-color: #07b90d;
+}
+
+table {
+  width: 90%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 3px solid transparent;
+  background-image: linear-gradient(to right, #F5F5DC, #8DAE94);
+  background-clip: padding-box;
+  margin-left: 70px;
+}
+
+table th {
+  background: linear-gradient(to right, #F5F5DC, #8DAE94);
+  padding: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #2B2B2F;
+  text-align: center;
+  border: 1px solid #ebebec;
+}
+
+table td {
+  padding: 10px;
+  font-size: 13px;
+  color: #2B2B2F;
+  text-align: center;
+  border: 1px solid #ebebec;
+}
+
+table tr {
+  background-color: #F7F7F7;
+}
+
+table th.people-header {
+  background-color: white;
+}
+
+table td.people-cell {
+  background-color: white;
+}
+
+table th h3,
+table td h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2B2B2F;
+}
+
+.reserved h2 {
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+.update-btn,
+.delete-btn {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.update-btn:hover,
+.delete-btn:hover {
+  background-color: #0056b3;
+}
+
+.logout-button {
+  margin: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 40px;
+  background: linear-gradient(to right, #5a9e5d, #578a62);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.logout-button a {
+  text-decoration: none;
+  color: #ffffff;
+}

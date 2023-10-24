@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <title>HOME |</title>
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='img/logo2.png') }}" class="logo" /></a>
+        <ul>
+            <li><a href="{{ url_for('home') }}">HOME</a></li>
+            <li><a href="{{ url_for('reserve') }}">RESERVE</a></li>
+             <li><a href="{{ url_for('admin') }}">SIGN-IN</a></li>
+         </ul>
+    </header>
+
+    <section id="promos" class="promos">
+        
+        <h2>PROMOS for Buffet</h2>
+        <div class="promo-images">
+            <img src="{{ url_for('static', filename='img/H1.jpg') }}" alt="Landscape Image" class="landscape-image">
+            <div class="box-image">
+                <img src="{{ url_for('static', filename='img/H2.jpg') }}" alt="Box Image 1">
+               
+            </div>
+               <div class="box-image">
+                <img src="{{ url_for('static', filename='img/H3.jpg') }}" alt="Box Image 1">
+               
+            </div>
+            <div class="box-image">
+                <img src="{{ url_for('static', filename='img/H5.jpg') }}" alt="Box Image 2">
+              
+            </div>
+            <div class="box-image">
+                <img src="{{ url_for('static', filename='img/H4.jpg') }}" alt="Box Image 3">
+             
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Our Bountiful Buffet</h2>
+    <p>Prepare to embark on a culinary journey like no other. Our buffet isn't just a meal; it's an experience, a celebration of flavors, a symphony of tastes that will tantalize your senses and leave you craving for more.</p>
+    <p>At our buffet, we don't just serve food; we craft memories. With a wide array of dishes meticulously prepared by our expert chefs, you'll traverse the world of cuisine without leaving your seat. From savory delights that dance on your palate to sweet treats that melt in your mouth, our buffet is a treasure trove of gastronomic wonders.</p>
+    <p>But it's not just the food that sets us apart; it's the atmosphere. Our elegantly designed dining area creates the perfect backdrop for your culinary adventure. The warm ambiance, soft lighting, and welcoming staff ensure that every visit to our buffet is a special occasion.</p>
+    <p>Whether you're celebrating a milestone, indulging in a romantic dinner, or simply enjoying a meal with loved ones, our buffet is the ideal choice. It's a place where conversations flow as freely as the wine, where laughter fills the air, and where every bite is a revelation.</p>
+    <p>Come and join us at our buffet. Discover the flavors of the world, savor the moments, and create memories that will linger long after the last plate is cleared. At our buffet, every meal is a masterpiece, and every moment is a celebration of taste.</p>
+    </section>
+
+
+            <section id="contact" class="contact-content">
+                <div class="contact-wrapper">
+                    <div class="contact-text">
+                    <h1>Contact Us</h1>
+                    <h2>Phone Number    : 0917-701-2911</h2>
+                    <h2>Location        :Cabanatuan, Nueva Ecija</h2>
+                        </div>
+                        <div class="box-image1">
+                        <img src="{{ url_for('static', filename='img/loc.webp') }}" alt="Location Image">
+                    </div>
+                </div>
+            </section>
+          
+
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/reservation.css') }}">
+    <title>RESERVE</title>
+</head>
+<body>
+
+     <header>
+                    <a href="{{ url_for('index') }}" ><img src="{{ url_for('static', filename='img/logo2.png') }}" class="logo" /> </a>
+                    <ul>
+                            <li> <a href="{{ url_for('home') }}">HOME</a></li>
+                            <li><a href="{{ url_for('reserve') }}">RESERVE</a></li>
+                           <li><a href="{{ url_for('admin') }}">SIGN-IN</a></li>
+                    </ul>
+                    
+    </header>
+        <div class="container">
+                <div class="modal">
+            <form class="form" method="post">   
+                <div class="banner"></div>
+                <label class="title">Make a Reservation</label>
+
+                <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" class="input-field" required>
+                </div>
+
+                <div class="form-group">
+                <label for="contact-number">Contact Number</label>
+                <input type="tel" id="contact-number" name="contact-number" class="input-field" required>
+                </div>
+
+                <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" class="input-field" required>
+                </div>
+
+                <div class="form-group">
+                <label for="meal-type">Meal Type</label>
+                <select id="meal-type" name="meal-type" class="input-field" required>
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Dinner">Dinner</option>
+                </select>
+                </div>
+
+                <div class="form-group">
+                <label for="num-people">Number of People</label>
+                <input type="number" id="num-people" name="num-people" class="input-field" required>
+                </div>
+
+                <div class="modal--footer">
+                <button class="upgrade-btn reserve-btn">Reserve Now</button>
+                </div>
+            </form>
+        </div>
+
+    <div class="reserved">
+            <div class="breakfast">
+            <h2>Breakfast</h2>
+            <table>
+            <tr>
+                <th><h3>Table No</h3></th>
+                <th><h3>Name</h3></th>
+                <th><h3>People</h3></th>
+                <th><h3>Date</h3></th>
+            </tr>
+            {% for reservation in reservations %}
+            {% if reservation[4] == "Breakfast" %}
+            <tr>
+                <td><h3>{{ loop.index }}</h3></td>
+                <td><h3>{{ reservation[1] }}</h3></td>
+                <td><h3>{{ reservation[5] }}</h3></td>
+                <td><h3>{{ reservation[3] }}</h3></td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </table>
+        </div>
+
+        <div class="lunch">
+            <h2>Lunch</h2>
+           <table>
+            <tr>
+                <th><h3>Table No</h3></th>
+                <th><h3>Name</h3></th>
+                <th><h3>People</h3></th>
+                <th><h3>Date</h3></th>
+            </tr>
+            {% for reservation in reservations %}
+            {% if reservation[4] == "Lunch" %}
+            <tr>
+                <td><h3>{{ loop.index }}</h3></td>
+                <td><h3>{{ reservation[1] }}</h3></td>
+                <td><h3>{{ reservation[5] }}</h3></td>  
+                <td><h3>{{ reservation[3] }}</h3></td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </table>
+        </div>
+
+        <div class="dinner">
+            <h2>Dinner</h2>
+           <table>
+            <tr>
+                <th><h3>Table No</h3></th>
+                <th><h3>Name</h3></th>
+                <th><h3>People</h3></th>
+                <th><h3>Date</h3></th>
+            </tr>
+            {% for reservation in reservations %}
+            {% if reservation[4] == "Dinner" %}
+            <tr>
+                <td><h3>{{ loop.index }}</h3></td>
+                <td><h3>{{ reservation[1] }}</h3></td>
+                <td><h3>{{ reservation[5] }}</h3></td>
+                <td><h3>{{ reservation[3] }}</h3></td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </table>
+        </div>
+
+
+        </div>
+    </div>
+   
+
+
+</body>
+</html>
